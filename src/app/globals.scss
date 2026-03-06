@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Import section styles
+@import '../styles/sessions/hero';
+
+:root {
+  --primary-orange: #DF6951;
+  --accent-yellow: #F1A501;
+  --navy-blue: #181E4B;
+}
+
+body {
+  font-family: var(--font-poppins), sans-serif;
+  color: #5E6282;
+  overflow-x: hidden;
+}
+
+// Apply the font to the heading globally or via Tailwind
+.font-volkhov {
+  font-family: var(--font-volkhov), serif;
+}

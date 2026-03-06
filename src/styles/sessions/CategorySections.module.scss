@@ -1,0 +1,123 @@
+.categoryWrapper {
+  padding: 100px 20px;
+  position: relative;
+  overflow: visible; // Needed for the orange accent to pop out
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+
+  .subTitle {
+    color: #5E6282;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+
+  .mainTitle {
+    font-family: 'Volkhov', serif;
+    font-size: 50px;
+    color: #181E4B;
+    font-weight: 700;
+  }
+
+  .plusGrid {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    z-index: -1;
+    opacity: 0.8;
+  }
+}
+
+.servicesGrid {
+  display: grid;
+  // Forces 1 row of 4 columns on desktop
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cardWrapper {
+  position: relative;
+  z-index: 1;
+
+  .card {
+    background: #fff;
+    padding: 10px 25px;
+    border-radius: 36px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .iconContainer {
+      position: relative;
+      margin-bottom: 25px;
+      
+      img { object-fit: contain; z-index: 2; position: relative; }
+      
+      .peachAccent {
+        position: absolute;
+        bottom: -5px;
+        right: -10px;
+        width: 50px;
+        height: 50px;
+        background: #FFF1DA;
+        border-radius: 18px 5px 18px 5px;
+        z-index: 1;
+      }
+    }
+
+    h3 {
+      color: #1E1D4C;
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #5E6282;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+
+  // Styles specifically for the 2nd card (Best Flights)
+  &.active {
+    .card {
+      box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 
+                  0px 64.8148px 46.8519px rgba(0, 0, 0, 0.015), 
+                  0px 38.5185px 25.4815px rgba(0, 0, 0, 0.012);
+    }
+
+    .orangeAccent {
+      position: absolute;
+      bottom: -50px;
+      left: -35px;
+      width: 100px;
+      height: 100px;
+      background: #DF6951;
+      border-radius: 30px 0 10px 0;
+      z-index: -1; // Places it behind the white card
+    }
+  }
+}
