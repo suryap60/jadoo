@@ -1,5 +1,5 @@
 .bookWrapper {
-  padding: 100px 20px;
+  padding: 60px 20px;
   background: #fff;
   position: relative;
   overflow: visible; // Needed for the right-side cards to overflow slightly
@@ -76,7 +76,7 @@
     padding: 25px;
     border-radius: 26px;
     width: 370px;
-    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.06);
     overflow: hidden;
     
     .imageContainer {
@@ -134,7 +134,7 @@
     border-radius: 18px;
     width: 250px;
     z-index: 10; // Ensures it floats on top of the main card
-    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.06);
 
     .avatarContainer {
       border-radius: 50%; overflow: hidden;

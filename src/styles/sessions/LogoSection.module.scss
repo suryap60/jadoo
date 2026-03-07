@@ -1,0 +1,58 @@
+.logoWrapper {
+  padding: 80px 0;
+  background: #FFFFFF;
+  width: 100%;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.logoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.logoItem {
+  /* Ensure all items occupy the same space */
+  width: 240px; 
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border-radius: 15px;
+
+  .logoImage {
+    object-fit: contain;
+    /* Apply black and white effect instead of opacity */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+
+  // Active Card Styling (Exact shadow from image)
+  &.centerCard {
+    background: #FFFFFF;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 
+                0px 64.8px 46.8px rgba(0, 0, 0, 0.015), 
+                0px 38.5px 25.5px rgba(0, 0, 0, 0.012), 
+                0px 20px 13px rgba(0, 0, 0, 0.01);
+
+    .logoImage {
+      /* Restore original color for the active card */
+      filter: grayscale(0%);
+    }
+  }
+
+  // Hover effect to switch colors without changing size
+  &:hover {
+    .logoImage {
+      filter: grayscale(0%);
+    }
+  }
+}
