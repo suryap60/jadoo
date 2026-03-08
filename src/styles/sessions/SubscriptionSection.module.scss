@@ -1,0 +1,135 @@
+.subscriptionWrapper {
+  padding: 100px 20px 120px; 
+  background: #FFFFFF;
+  position: relative;
+  overflow: visible;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+  }
+
+  .gridDecor {
+    position: absolute;
+    bottom: -70px; 
+    right: -100px; 
+    width: 150px; 
+    height: 150px;
+    background-image: url('/assets/Group 5.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1; 
+  }
+
+  .behindRing {
+     position: absolute;
+     bottom: -40px;
+     right: -40px;
+     width: 280px;
+     height: 280px;
+     background-image: url('/assets/ring.png');
+     background-size: contain;
+     background-repeat: no-repeat;
+     z-index: -1; 
+     opacity: 0.15;
+  }
+}
+
+
+.cardContainer {
+  background: #DFD7F9;
+  padding: 80px 40px;
+  position: relative;
+  border-radius: 120px 20px 20px 20px; 
+  overflow: hidden; 
+  
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02);
+  
+  &::before {
+    content: ''; 
+    position: absolute;
+    bottom: 0;   
+    left: 90; 
+    width: 300px; 
+    height: 300px;
+    background-image: url('/assets/ring.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: bottom left; 
+    z-index: 1; 
+    opacity: 0.4;
+  }
+
+  &::after {
+    content: ''; 
+    position: absolute;
+    top: 0;     
+    right: 0;      
+    width: 200px; 
+    height: 200px;
+    background-image: url('/assets/ring.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: top right;
+    transform: rotate(225deg);
+    z-index: 1; 
+    opacity: 0.15; 
+  }
+}
+
+.cardContent {
+  position: relative; z-index: 10; 
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+
+.descriptionText {
+  color: #181E4B; font-size: 26px; font-weight: 600; line-height: 1.6; max-width: 650px; margin-bottom: 50px;
+}
+
+.inputGroup {
+  display: flex; gap: 20px; justify-content: center; align-items: center; width: 100%; max-width: 600px;
+  @media (max-width: 768px) { flex-direction: column; width: 100%; gap: 15px; }
+}
+
+.inputWrapper {
+  position: relative; flex: 1; display: flex; align-items: center; width: 100%;
+  .emailIcon { position: absolute; left: 20px; color: #84829A; font-size: 22px; }
+}
+
+.emailInput {
+  width: 100%; height: 60px; padding: 0 20px 0 60px; 
+  background: #FFFFFF; border: none; border-radius: 10px; 
+  color: #181E4B; font-size: 16px;
+  &::placeholder { color: #84829A; opacity: 1; }
+}
+
+.subscribeButton {
+  height: 60px; padding: 0 40px; background: #FF7D68; 
+  color: #FFFFFF; font-size: 16px; font-weight: 600; border: none; border-radius: 10px; cursor: pointer; transition: background 0.3s;
+  &:hover { background: #E06C5A; }
+  @media (max-width: 768px) { width: 100%; } 
+}
+
+
+.floatingArrowWrapper {
+  position: absolute;
+  top: -25px; 
+  right: -25px; 
+  z-index: 30; 
+  width: 70px; 
+  height: 70px;
+  background: #7368E0; 
+  border-radius: 50%;
+  color: #FFFFFF; 
+  font-size: 32px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+
+  .floatingArrow {
+    font-size: 28px;
+    transform: rotate(0deg); 
+  }
+}
