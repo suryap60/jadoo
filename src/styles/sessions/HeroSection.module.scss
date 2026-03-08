@@ -1,0 +1,135 @@
+$font-volkhov: 'Volkhov', serif;
+$font-poppins: 'Poppins', sans-serif;
+
+.heroWrapper {
+  padding: 100px 0 30px;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden; 
+}
+
+.bgDecoration {
+  position: absolute;
+  top: 0;
+  right: 0; 
+  z-index: 1;
+  pointer-events: none;
+  
+  @media (max-width: 768px) {
+    width: 300px; 
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.textColumn {
+  .tagline {
+    font-family: $font-poppins;
+    font-weight: 700;
+    font-size: 20px;
+    color: #DF6951;
+    margin-bottom: 0px;
+  }
+
+  .mainTitle {
+    font-family: $font-volkhov;
+    font-weight: 700;
+    font-size: 84px;
+    color: #181E4B;
+    line-height: 1.1;
+    margin-bottom: 30px;
+
+    .highlightedWrapper {
+      position: relative;
+      display: inline-block;
+      
+      .underlineDecore {
+        position: absolute;
+        bottom: -7px; 
+        left: -40px; 
+        z-index: -1;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1024px) { font-size: 58px; }
+  }
+
+  .description {
+    font-family: $font-poppins;
+    font-size: 16px;
+    color: #5E6282;
+    line-height: 1.8;
+    max-width: 470px;
+    margin-bottom: 34px;
+    @media (max-width: 1024px) { margin: 0 auto 34px; }
+  }
+
+  .buttonGroup {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    @media (max-width: 1024px) { justify-content: center; }
+  }
+
+  .findOutMoreBtn {
+    background: #F1A501;
+    color: white;
+    padding: 18px 26px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+    box-shadow: 0px 20px 35px rgba(241, 165, 1, 0.15);
+    cursor: pointer;
+  }
+
+  .playDemoGroup {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+    .playButtonCircle {
+      width: 52px;
+      height: 52px;
+      background: #DF6951;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      box-shadow: 0px 15px 30px rgba(223, 105, 81, 0.3);
+    }
+    .playDemoText { color: #686D77; font-weight: 500; }
+  }
+}
+
+.imageColumn {
+  position: relative;
+  .mainImageContainer {
+    position: relative;
+    width: 100%;
+    height: 750px;
+    z-index: 5;
+    @media (max-width: 1024px) { height: 500px; }
+  }
+
+  .planeImage {
+    position: absolute;
+    &.planeRight { top: 20%; right: 0%; z-index: 1; }
+    &.planeLeft { top: 15%; left: 20%; z-index: 4; } // Behind traveller
+  }
+}

@@ -87,11 +87,9 @@
   }
 }
 
-// THE BACKGROUND CARD - FIXED FOR BOTTOM-RIGHT OFFSET
 .backgroundReviewCard {
   position: absolute; 
   z-index: 5; 
-  /* FIXED: Positioning it relative to the main card's bottom right */
   top: 50px;     
   left: 40px;    
   width: 100%;
@@ -125,5 +123,83 @@
     font-size: 24px; color: #BCB8C2;
     transition: color 0.3s;
     &:hover { color: #39425D; }
+  }
+}
+
+@media (max-width: 1024px) {
+  .testimonialWrapper {
+    padding: 40px 20px;
+    
+    .container {
+      grid-template-columns: 1fr; // Stack columns
+      text-align: center;
+      gap: 80px; // Space for the floating avatar
+    }
+  }
+
+  .textColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mainTitle {
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+
+    .slidingDots {
+      margin-bottom: 20px;
+    }
+  }
+
+  .cardsColumn {
+    flex-direction: column;
+    min-height: auto;
+    align-items: center;
+  }
+
+  .cardStack {
+    max-width: 100%;
+    margin-bottom: 60px; 
+    display: flex;
+    justify-content: center;
+  }
+
+  .mainReviewCard {
+    max-width: 90%;
+    padding: 25px;
+    margin: 0 auto;
+
+    .avatarContainer {
+      // Center the avatar on mobile
+      left: 50%;
+      transform: translateX(-50%);
+      top: -35px;
+    }
+  }
+
+  .backgroundReviewCard {
+    top: 30px;
+    left: 15px;
+    width: 90%;
+    max-width: 90%;
+    padding: 20px;
+    
+    .authorMeta {
+      display: none; 
+    }
+  }
+
+  .arrowControls {
+    flex-direction: row; 
+    padding-left: 0; 
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+
+    .arrowButton {
+      transform: rotate(-90deg); 
+      font-size: 30px;
+    }
   }
 }
