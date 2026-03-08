@@ -1,55 +1,53 @@
+"use client";
+
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../styles/sessions/Navbar.module.scss';
-import { IoChevronDown } from "react-icons/io5"; // For the language dropdown
+import { IoChevronDown, IoMenu, IoClose } from "react-icons/io5"; 
 
 export const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
-    // Fixed positioning to keep navbar on top of the hero shape
     <header className={styles.navbarWrapper}>
       <nav className={styles.container}>
         
-        {/* Logo Section (Left End) */}
         <div className={styles.logoContainer}>
           <Link href="/">
-            <Image 
-              src="/assets/logo.png" // Path to your Jadoo logo image
-              alt="Jadoo Logo" 
-              width={112} // Matches the Figma asset width
-              height={32} 
-              priority // High priority loading
-            />
+            <Image src="/assets/logo.png" alt="Jadoo Logo" width={112} height={32} priority />
           </Link>
         </div>
 
-        {/* Links and Actions Group (Right End) */}
-        <div className={styles.navGroup}>
+        <div className={styles.mobileMenuIcon} onClick={toggleMenu}>
+          {isMenuOpen ? <IoClose /> : <IoMenu />}
+        </div>
+
+        <div className={`${styles.navGroup} ${isMenuOpen ? styles.active : ''}`}>
           
           <ul className={styles.navLinks}>
-            <li><Link href="/destinations">Destinations</Link></li>
-            <li><Link href="/hotels">Hotels</Link></li>
-            <li><Link href="/flights">Flights</Link></li>
-            <li><Link href="/bookings">Bookings</Link></li>
+            <li><Link href="/" onClick={() => setIsMenuOpen(false)}>Destinations</Link></li>
+            <li><Link href="/" onClick={() => setIsMenuOpen(false)}>Hotels</Link></li>
+            <li><Link href="/" onClick={() => setIsMenuOpen(false)}>Flights</Link></li>
+            <li><Link href="/" onClick={() => setIsMenuOpen(false)}>Bookings</Link></li>
           </ul>
 
           <div className={styles.actionsGroup}>
-            <Link href="/login" className={styles.loginLink}>
+            <Link href="/" className={styles.loginLink} onClick={() => setIsMenuOpen(false)}>
               Login
             </Link>
-            
-            <Link href="/signup" className={styles.signUpButton}>
+            <Link href="/" className={styles.signUpButton} onClick={() => setIsMenuOpen(false)}>
               Sign up
             </Link>
-
-            {/* Language Selection */}
             <div className={styles.languageSwitcher}>
               <span>EN</span>
-              <IoChevronDown className={styles.chevronIcon} />
+              <IoChevronDown />
             </div>
           </div>
           
         </div>
-
       </nav>
     </header>
   );

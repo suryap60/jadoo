@@ -40,7 +40,6 @@ export const TestimonialsSection = () => {
   };
 
   const currentReview = reviews[activeIndex];
-  // Calculate the index for the card sitting behind
   const behindIndex = (activeIndex + 1) % reviews.length;
   const behindReview = reviews[behindIndex];
 
@@ -77,7 +76,7 @@ export const TestimonialsSection = () => {
               </div>
             </div>
 
-            {/* Background Card - Peeking out from Bottom Right */}
+            {/* Background Card */}
             <div className={styles.backgroundReviewCard}>
               <div className={styles.authorMeta}>
                 <h3>{behindReview.name}</h3>

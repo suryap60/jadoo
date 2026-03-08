@@ -37,7 +37,6 @@ export const DestinationsSection = () => {
           {destinations.map((dest, index) => (
             <div key={index} className={styles.destCardWrapper}>
               
-              {/* Background accent image for the 3rd card */}
               {index === 2 && (
                 <div className={styles.swirlAccent}>
                   <img src="/assets/dest-swirl.png" alt="" />
@@ -46,7 +45,6 @@ export const DestinationsSection = () => {
 
               <div className={styles.card}>
                 <div className={styles.cardImageContainer}>
-                  {/* object-cover ensures the image fills the top area perfectly */}
                   <Image 
                     src={dest.image} 
                     alt={dest.title} 
@@ -56,13 +54,13 @@ export const DestinationsSection = () => {
                 </div>
 
                 <div className={styles.cardContent}>
-                  {/* First row: Title and Price on opposite ends */}
+                  {/* First row */}
                   <div className={styles.infoRow}>
                     <span className={styles.placeName}>{dest.title}</span>
                     <span className={styles.priceTag}>{dest.price}</span>
                   </div>
 
-                  {/* Second row: Non-rotated icon and duration */}
+                  {/* Second row*/}
                   <div className={styles.durationRow}>
                     <FaLocationArrow className={styles.arrowIcon} />
                     <span className={styles.durationText}>{dest.duration}</span>

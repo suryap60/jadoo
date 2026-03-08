@@ -17,7 +17,7 @@ export const CategorySection = () => {
         <div className={styles.header}>
           <p className={styles.subTitle}>CATEGORY</p>
           <h2 className={styles.mainTitle}>We Offer Best Services</h2>
-          {/* Top Right Decorative Grid */}
+          {/* Top Right */}
           <div className={styles.plusGrid}>
             <Image src="/assets/Group 4.png" alt="" width={150} height={150} />
           </div>
@@ -28,13 +28,11 @@ export const CategorySection = () => {
           {services.map((item, index) => (
             <div key={index} className={`${styles.cardWrapper} ${index === 1 ? styles.active : ''}`}>
               
-              {/* The Orange Background Element (Only for 2nd card) */}
               {index === 1 && <div className={styles.orangeAccent} />}
               
               <div className={styles.card}>
                 <div className={styles.iconContainer}>
                   <Image src={item.icon} alt={item.title} width={70} height={70} />
-                  {/* <div className={styles.peachAccent} /> */}
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>

@@ -39,7 +39,6 @@
     height: auto !important;
     max-height: 50px;
     object-fit: contain;
-    /* FIX: Force Dark Black color instead of grayscale */
     filter: brightness(0); 
     opacity: 0.5; 
     transition: all 0.4s ease;
@@ -47,10 +46,10 @@
 
   &.centerCard {
     background: #FFFFFF;
-    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.05); // Clean shadow per design
+    box-shadow: 0px 40px 60px rgba(0, 0, 0, 0.05);
 
     .logoImage {
-      filter: none; // Restore original colors for featured logo
+      filter: none; 
       opacity: 1;
       max-height: 60px;
     }
@@ -90,12 +89,12 @@
   }
 
   .hideOnMobile {
-    display: none !important; // Only show the activeIndex logo
+    display: none !important; 
   }
 
   .logoItem {
     flex: none;
     width: 100%;
-    box-shadow: none !important; // Cleaner look for mobile single view
+    box-shadow: none !important; 
   }
 }

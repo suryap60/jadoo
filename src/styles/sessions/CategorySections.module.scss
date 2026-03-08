@@ -1,7 +1,7 @@
 .categoryWrapper {
   padding: 100px 20px;
   position: relative;
-  overflow: visible; // Needed for the orange accent to pop out
+  overflow: visible; 
 
   .container {
     max-width: 1200px;
@@ -41,7 +41,6 @@
 
 .servicesGrid {
   display: grid;
-  // Forces 1 row of 4 columns on desktop
   grid-template-columns: repeat(4, 1fr); 
   gap: 40px;
 
@@ -101,7 +100,6 @@
     }
   }
 
-  // Styles specifically for the 2nd card (Best Flights)
   &.active {
     .card {
       box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.02), 
@@ -117,7 +115,7 @@
       height: 100px;
       background: #DF6951;
       border-radius: 30px 0 10px 0;
-      z-index: -1; // Places it behind the white card
+      z-index: -1; 
     }
   }
 }

@@ -5,7 +5,6 @@ import { Navbar } from '../layout/Navbar';
 
 export const HeroSection = () => {
   return (
-    // relative container to anchor the asymmetrical background shape
     <section className={styles.heroWrapper}>
       <Navbar />
       <div className={styles.bgDecoration}>
@@ -21,7 +20,7 @@ export const HeroSection = () => {
 
       <div className={styles.container}>
         
-        {/* Left Side: Text and Buttons */}
+        {/* Left Side */}
         <div className={styles.textColumn}>
           <p className={styles.tagline}>BEST DESTINATIONS AROUND THE WORLD</p>
           
@@ -51,31 +50,30 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        {/* Right Side: Triple layered images */}
+        {/* Right Side */}
         <div className={styles.imageColumn}>
           
           {/* Main Traveller Image */}
           <div className={styles.mainImageContainer}>
             <Image 
-              src="/assets/Traveller 1.png" // Path to your main image
+              src="/assets/Traveller 1.png"
               alt="Traveller with backpack sitting on suitcase" 
               layout="fill"
               objectFit="contain"
-              priority // High priority loading for hero image
+              priority 
             />
           </div>
 
-          {/* RIGHT Plane Image (Large, on top) */}
+          
           <div className={`${styles.planeImage} ${styles.planeRight}`}>
             <Image 
-              src="/assets/plane.png" // Path to your plane image
+              src="/assets/plane.png"
               alt="Airplane icon" 
               width={120} 
               height={120} 
             />
           </div>
 
-          {/* LEFT Plane Image (Smaller, partially behind main image) */}
           <div className={`${styles.planeImage} ${styles.planeLeft}`}>
             <Image 
               src="/assets/plane.png" // Same path to your plane image

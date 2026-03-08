@@ -130,6 +130,6 @@ $font-poppins: 'Poppins', sans-serif;
   .planeImage {
     position: absolute;
     &.planeRight { top: 20%; right: 0%; z-index: 1; }
-    &.planeLeft { top: 15%; left: 20%; z-index: 4; } // Behind traveller
+    &.planeLeft { top: 15%; left: 20%; z-index: 4; } 
   }
 }

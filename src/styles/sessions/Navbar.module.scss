@@ -1,8 +1,8 @@
 $font-poppins: 'Poppins', sans-serif;
-$font-google-sans: 'Google Sans', sans-serif; // If needed for specific logo/headings
+$font-google-sans: 'Google Sans', sans-serif; 
 
 .navbarWrapper {
-  position: absolute; // Fixed on top of hero content
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
@@ -26,43 +26,42 @@ $font-google-sans: 'Google Sans', sans-serif; // If needed for specific logo/hea
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
-  justify-content: space-between; // Separates logo (left) and navGroup (right)
+  justify-content: space-between; 
   align-items: center;
 }
 
 .navGroup {
   display: flex;
   align-items: center;
-  gap: 60px; // Large gap between Links and Actions
+  gap: 60px; 
 
-  // Hides links on mobile to simplify view
   @media (max-width: 900px) {
-    display: none; // Add hamburger menu logic here
+    display: none; 
   }
 }
 
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 30px; // Spacing between individual links
+  gap: 30px; 
   list-style: none;
   padding: 0;
   margin: 0;
 
   li a {
-    font-family: $font-google-sans; // or Poppins
+    font-family: $font-google-sans; 
     font-size: 17px;
-    color: #212832; // Exact dark text color from image
+    color: #212832; 
     text-decoration: none;
     transition: color 0.3s;
-    &:hover { color: #DF6951; } // Peach color on hover
+    &:hover { color: #DF6951; } 
   }
 }
 
 .actionsGroup {
   display: flex;
   align-items: center;
-  gap: 30px; // Spacing between Login, Signup, EN
+  gap: 30px; 
 }
 
 .loginLink {
@@ -74,23 +73,21 @@ $font-google-sans: 'Google Sans', sans-serif; // If needed for specific logo/hea
   &:hover { color: #DF6951; }
 }
 
-// Sign Up Button styling with specific border
 .signUpButton {
   font-family: $font-google-sans;
   font-size: 17px;
   color: #212832;
   text-decoration: none;
   padding: 10px 24px;
-  border: 1px solid #212832; // Matches text color
-  border-radius: 6px; // Soft rounding from image
+  border: 1px solid #212832; 
+  border-radius: 6px;
   transition: all 0.3s;
   &:hover {
-    background: #212832; // Fill on hover
+    background: #212832; 
     color: #FFFFFF;
   }
 }
 
-// Language Switcher styling
 .languageSwitcher {
   display: flex;
   align-items: center;
@@ -103,5 +100,60 @@ $font-google-sans: 'Google Sans', sans-serif; // If needed for specific logo/hea
   .chevronIcon {
     font-size: 12px;
     color: #212832;
+  }
+}
+
+.mobileMenuIcon {
+  display: none; // Hidden on desktop
+  font-size: 30px;
+  color: #212832;
+  cursor: pointer;
+  z-index: 110; 
+
+  @media (max-width: 900px) {
+    display: block;
+  }
+}
+
+.navGroup {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  @media (max-width: 900px) {
+    /* Transform into a Mobile Sidebar */
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 280px; 
+    height: 100vh;
+    background: #FFFFFF;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+
+    &.active {
+      right: 0; 
+    }
+
+    .navLinks {
+      flex-direction: column;
+      gap: 25px;
+      text-align: center;
+    }
+
+    .actionsGroup {
+      flex-direction: column;
+      gap: 20px;
+      width: 80%; 
+      
+      .signUpButton {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 }

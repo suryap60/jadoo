@@ -15,7 +15,7 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* This is the most important line for mobile */
+  overflow-x: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -30,7 +30,6 @@ body {
   overflow-x: hidden;
 }
 
-// Apply the font to the heading globally or via Tailwind
 .font-volkhov {
   font-family: var(--font-volkhov), serif;
 }

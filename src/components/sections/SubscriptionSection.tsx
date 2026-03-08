@@ -10,10 +10,8 @@ export const SubscriptionSection = () => {
         <div className={styles.behindRing} />
         
         <div className={styles.gridDecor} /> 
-        {/* Main Card (Lavender/Asymmetrical background) */}
         <div className={styles.cardContainer}>
           
-          {/* Internal elements for the card (Title and Form) */}
           <div className={styles.cardContent}>
             <h2 className={styles.descriptionText}>
               Subscribe to get information, latest news and other interesting offers about Jadoo
@@ -35,7 +33,6 @@ export const SubscriptionSection = () => {
           </div>
         </div>
 
-        {/* Floating purple paper plane (Positions relative to .container) */}
         <div className={styles.floatingArrowWrapper}>
           <IoPaperPlaneSharp className={styles.floatingArrow} />
         </div>

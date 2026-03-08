@@ -14,7 +14,7 @@ const logos = [
 ];
 
 export const LogoSection = () => {
-  const [activeIndex, setActiveIndex] = useState(2); // Start with Expedia active
+  const [activeIndex, setActiveIndex] = useState(2);
 
   const handleNext = () => {
     setActiveIndex((prev) => (prev + 1) % logos.length);
@@ -28,7 +28,6 @@ export const LogoSection = () => {
     <section className={styles.logoWrapper}>
       <div className={styles.container}>
         
-        {/* Navigation Arrows - Visible only on Mobile */}
         <div className={styles.mobileControls}>
           <button onClick={handlePrev} className={styles.arrowButton}><IoChevronBack /></button>
           <button onClick={handleNext} className={styles.arrowButton}><IoChevronForward /></button>
