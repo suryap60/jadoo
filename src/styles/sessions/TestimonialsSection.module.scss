@@ -50,7 +50,7 @@
 .cardStack {
   position: relative;
   width: 100%;
-  max-width: 540px; // Room for the main card + offset
+  max-width: 540px; 
 }
 
 .mainReviewCard {
@@ -90,12 +90,12 @@
 .backgroundReviewCard {
   position: absolute; 
   z-index: 5; 
-  top: 50px;     
+  top: 100px;     
   left: 40px;    
   width: 100%;
   max-width: 500px;
   height: 100%;
-  padding: 35px;
+  padding: 20px 35px;
   background: #FFFFFF;
   border: 2px solid #F7F7F7; // Visible border as per image
   border-radius: 12px;
@@ -107,7 +107,7 @@
   opacity: 0.8;
   
   .authorMeta {
-    h3 { color: #181E4B; font-size: 18px; font-weight: 700; margin-bottom: 3px; }
+    h3 { color: #181E4B; font-size: 18px; font-weight: 700; margin-bottom: 3px; opacity: 0.9;}
     p { color: #5E6282; font-size: 14px; }
   }
 }

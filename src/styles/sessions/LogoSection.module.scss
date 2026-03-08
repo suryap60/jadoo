@@ -41,7 +41,7 @@
     object-fit: contain;
     /* FIX: Force Dark Black color instead of grayscale */
     filter: brightness(0); 
-    opacity: 0.3; // Faded look for inactive
+    opacity: 0.5; 
     transition: all 0.4s ease;
   }
 
